@@ -5,13 +5,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdn.vrugd.jp/',
+        hostname: 'cdn.vrugd.jp',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'cdn.vketreal.jp/',
+        hostname: 'cdn.vketreal.jp',
         port: '',
         pathname: '/**',
       },
