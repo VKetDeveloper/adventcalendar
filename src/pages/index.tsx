@@ -29,7 +29,7 @@ export default function Home() {
   <CountdownEvent title="VketReal 2025 Summer in Sapporo 開催まで" target="2025-07-21T10:00:00+09:00" />
   <CountdownEvent title="VketReal 2025 Summer 開催まで" target="2025-07-26T10:00:00+09:00" />
 </main>
-<footer style={{ textAlign: 'center', padding: '20px' }}><p>©{new Date().getFullYear()} VketReal Unofficial Garage Developers. All Rights Reserved.</p>
+<footer style={{ textAlign: 'center', padding: '20px' }}><p>©{new Date().getFullYear()} <a href="../">VketReal Unofficial Garage Developers</a>. All Rights Reserved.</p>
 </footer>
     </>
   );
