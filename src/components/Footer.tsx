@@ -1,8 +1,8 @@
-// components/Footer.tsx
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import './Footer.css'; // Assuming you have a CSS file for styling
+import '@/styles/Footer.css'; // src/styles に移動したと仮定
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       <div className="md:flex md:justify-between">
         <Link href="../" className="flex items-center">
           <Image
-            src="/img/logo.png"
+            src="img/logo.png" // basePathを考慮する場合
             alt="VRUGD Logo"
             width={120}
             height={40}
