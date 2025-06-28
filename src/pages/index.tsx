@@ -23,8 +23,15 @@ export default function Home() {
           marginBottom: '1rem',
           textAlign: 'center',
         }}>イベントカウントダウン</h1>
-        <CountdownEvent title="🌟 Another Event 開催まで" target="2025-07-21T10:00:00+09:00" />
+        <p style={{
+          fontSize: '1.2rem',
+          marginBottom: '2rem',
+          textAlign: 'center',
+        }}>次のイベントまでのカウントダウンを表示します。</p>
+        
+        {/* Countdown Component */}
         <CountdownEvent title="🎉 VketReal 開催まで" target="2025-07-26T10:00:00+09:00" />
+        <CountdownEvent title="🌟 VketReal in Sapporo 開催まで" target="2025-07-21T10:00:00+09:00" />
       </main>
       <Footer />
     </>

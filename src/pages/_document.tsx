@@ -207,7 +207,6 @@ export default function Document() {
       <body className="antialiased" style={{ fontFamily: 'WDXL Lubrifont JP N, sans-serif' }}>
         <Main />
         <NextScript />
-        <Footer />
       </body>
     </Html>
   );
