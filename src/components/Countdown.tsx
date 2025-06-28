@@ -10,6 +10,16 @@ type CountdownEventProps = {
 
 export function CountdownEvent({ title, target }: CountdownEventProps) {
   const [status, setStatus] = useState<string>('読み込み中...');
+  const [isDark, setIsDark] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Detect dark mode
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDark(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsDark(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   useEffect(() => {
     const targetDate = new Date(target);
@@ -17,7 +27,6 @@ export function CountdownEvent({ title, target }: CountdownEventProps) {
     const updateCountdown = () => {
       const now = new Date();
       const diffMs = targetDate.getTime() - now.getTime();
-
       const isSameDay = now.toDateString() === targetDate.toDateString();
 
       if (isSameDay) {
@@ -34,37 +43,77 @@ export function CountdownEvent({ title, target }: CountdownEventProps) {
     };
 
     updateCountdown(); // 初回即実行
-    const interval = setInterval(updateCountdown, 1000); // 1秒ごとに更新
+    const interval = setInterval(updateCountdown, 1000);
 
-    return () => clearInterval(interval); // クリーンアップ
+    return () => clearInterval(interval);
   }, [target]);
 
+  // カラースキーム
+  const colors = isDark
+    ? {
+        text: 'white',
+        bg: '#222',
+        border: '#444',
+        boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+      }
+    : {
+        text: '#222',
+        bg: '#fff',
+        border: '#bbb',
+        boxShadow: '0 4px 8px rgba(0,0,0,0.08)',
+      };
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <section
+      aria-labelledby="countdown-heading"
       style={{
         textAlign: 'center',
-        marginBottom: '2rem',
-        color: 'white',
+        margin: '2rem auto',
+        padding: '1rem',
+        maxWidth: '600px',
+        color: colors.text,
+        background: isDark ? '#111' : '#f9f9f9',
+        borderRadius: '16px',
+        transition: 'background 0.3s, color 0.3s',
       }}
     >
-      <h2 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>{title}</h2>
-      <div
+      <motion.h2
+        id="countdown-heading"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        style={{
+          fontSize: '2rem',
+          marginBottom: '1rem',
+          borderBottom: `2px solid ${colors.border}`,
+          paddingBottom: '0.5rem',
+          color: colors.text,
+        }}
+      >
+        {title}
+      </motion.h2>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        role="status"
+        aria-live="polite"
         style={{
           fontSize: '1.5rem',
-          backgroundColor: '#222',
+          backgroundColor: colors.bg,
+          color: colors.text,
           padding: '1rem 2rem',
           borderRadius: '12px',
           display: 'inline-block',
           minWidth: '16em',
-          textAlign: 'center',
-          boxSizing: 'border-box',
+          boxShadow: colors.boxShadow,
+          border: `1px solid ${colors.border}`,
+          transition: 'background 0.3s, color 0.3s, border 0.3s',
         }}
       >
         {status}
-      </div>
-    </motion.div>
+      </motion.div>
+    </section>
   );
 }
