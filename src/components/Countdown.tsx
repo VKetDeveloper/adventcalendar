@@ -67,49 +67,59 @@ export function CountdownEvent({ title, target }: CountdownEventProps) {
           section.countdown {
             text-align: center;
             margin: 2rem auto;
-            padding: 1rem;
+            padding: 1.5rem;
             max-width: 600px;
-            width: 90vw; /* 画面幅の90%に */
+            width: 90vw;
             color: ${colors.text};
             background: ${isDark ? '#111' : '#f9f9f9'};
             border-radius: 16px;
+            box-sizing: border-box;
             transition: background 0.3s, color 0.3s;
           }
+
           h2.countdown-title {
-            font-size: 2rem;
+            font-size: 1.75rem;
+            line-height: 1.4;
             margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
             border-bottom: 2px solid ${colors.border};
-            padding-bottom: 0.5rem;
             color: ${colors.text};
+            word-break: keep-all;
+            white-space: normal;
           }
+
           div.countdown-status {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             background-color: ${colors.bg};
             color: ${colors.text};
-            padding: 1rem 2rem;
+            padding: 1rem 1.5rem;
             border-radius: 12px;
             display: inline-block;
-            min-width: 16em;
+            width: auto;
+            min-width: 14em;
+            letter-spacing: 0.03em;
             box-shadow: ${colors.boxShadow};
             border: 1px solid ${colors.border};
             transition: background 0.3s, color 0.3s, border 0.3s;
           }
 
-          /* スマホ用調整 */
           @media (max-width: 480px) {
+            section.countdown {
+              margin: 1.25rem auto;
+              padding: 1rem 1.25rem;
+              border-radius: 12px;
+            }
+
             h2.countdown-title {
-              font-size: 1.5rem;
+              font-size: 1.3rem;
               margin-bottom: 0.75rem;
             }
+
             div.countdown-status {
-              font-size: 1.2rem;
+              font-size: 1.1rem;
               padding: 0.75rem 1rem;
-              min-width: 12em;
-            }
-            section.countdown {
-              margin: 1rem auto;
-              padding: 0.75rem;
-              border-radius: 12px;
+              width: 100%;
+              min-width: unset;
             }
           }
         `}
