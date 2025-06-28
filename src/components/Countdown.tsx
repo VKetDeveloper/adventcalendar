@@ -8,11 +8,12 @@ type CountdownEventProps = {
   target: string; // ISO日付文字列
 };
 
+
 export function CountdownEvent({ title, target }: CountdownEventProps) {
   const [status, setStatus] = useState<string>('読み込み中...');
 
   useEffect(() => {
-    const updateCountdown = () => {
+    function updateCountdown() {
       const now = new Date();
       const targetDate = new Date(target);
       const diffMs = targetDate.getTime() - now.getTime();
@@ -36,7 +37,7 @@ export function CountdownEvent({ title, target }: CountdownEventProps) {
       const seconds = Math.floor((diffMs / 1000) % 60);
 
       setStatus(`${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`);
-    };
+    }
 
     updateCountdown();
     const timer = setInterval(updateCountdown, 1000);
