@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { CountdownEvent } from '../components/Countdown';
-import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -33,7 +32,7 @@ export default function Home() {
         <CountdownEvent title="🎉 VketReal 2025 Summer 開催まで" target="2025-07-26T10:00:00+09:00" />
         <CountdownEvent title="🌟 VketReal 2025 Summer in Sapporo 開催まで" target="2025-07-21T10:00:00+09:00" />
       </main>
-      <Footer />
+      
     </>
   );
 }
