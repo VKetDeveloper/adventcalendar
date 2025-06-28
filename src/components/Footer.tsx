@@ -1,27 +1,29 @@
 'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import '@/styles/Footer.css'; // src/styles に移動したと仮定
+import styles from '@/styles/Footer.module.css'; // Adjust the path as necessary
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="footer">
-      <div className="md:flex md:justify-between">
-        <Link href="../" className="flex items-center">
+    <footer className={styles.footer}>
+      <div className={styles.logoWrapper}>
+        <Link href="/" className={styles.logoLink}>
           <Image
-            src="img/logo.png" // basePathを考慮する場合
+            src="/img/logo.png"
             alt="VRUGD Logo"
             width={120}
             height={40}
-            className="h-auto"
+            className={styles.logoImage}
           />
         </Link>
       </div>
-      <hr />
-      <p className="copyright">
-        Copyright © {currentYear} VketReal Unofficial Garage Developers. All Rights Reserved.
+      <hr className={styles.divider} />
+      <p className={styles.copyright}>
+        © {currentYear} VketReal Unofficial Garage Developers. All Rights Reserved.
       </p>
     </footer>
   );
