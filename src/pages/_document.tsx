@@ -8,28 +8,28 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="A map of Akihabara's best spots recommended by VketReal volunteer staff." />
+        <meta name="description" content="VketRealの開催までのAdventCalendarです。" />
         <meta name="keywords" content="Akihabara, anime, manga, spots, map" />
         <meta name="robots" content="index, follow" />
         <meta name="google-site-verification" content="G-96S6L2NKMT" />
         <meta name="google-site-verification" content="ZjJhUGR4bWFTcWM5dGc5T3RQeGRBQT090" />
-        <meta itemProp="name" content="VketReal Volunteer Staff Recommended Akihabara Map" />
-        <meta itemProp="description" content="A map of Akihabara's best spots recommended by VketReal volunteer staff." />
+        <meta itemProp="name" content="VketReal AdventCalendar" />
+        <meta itemProp="description" content="VketRealの開催までのAdventCalendarです。" />
         <meta itemProp="image" content="https://www.vrugd.jp/AdventCalendar/akiba_maps_og.png" />
         <meta name="author" content="Mika" />
-        <meta name="application-name" content="VketReal Volunteer Staff Recommended Akihabara Map" />
+        <meta name="application-name" content="VketReal AdventCalendar" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta property="og:url" content="https://www.vrugd.jp/AdventCalendar/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="VketReal Volunteer Staff Recommended Akihabara Map" />
-        <meta property="og:description" content="A map of Akihabara's best spots recommended by VketReal volunteer staff." />
+        <meta property="og:title" content="VketReal AdventCalendar" />
+        <meta property="og:description" content="VketRealの開催までのAdventCalendarです。" />
         <meta property="og:image" content="https://www.vrugd.jp/AdventCalendar/akiba_maps_og.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="VketReal Volunteer Staff Recommended Akihabara Map" />
-        <meta name="twitter:description" content="A map of Akihabara's best spots recommended by VketReal volunteer staff." />
+        <meta name="twitter:title" content="VketReal AdventCalendar" />
+        <meta name="twitter:description" content="VketRealの開催までのAdventCalendarです。" />
         <meta name="twitter:image" content="https://www.vrugd.jp/AdventCalendar/akiba_maps_og.png" />
         <meta name="twitter:site" content="@vrugd_jp" />
         <meta name="twitter:creator" content="@vrugd_jp" />
