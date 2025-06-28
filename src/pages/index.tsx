@@ -30,8 +30,8 @@ export default function Home() {
         }}>次のイベントまでのカウントダウンを表示します。</p>
         
         {/* Countdown Component */}
-        <CountdownEvent title="🎉 VketReal 開催まで" target="2025-07-26T10:00:00+09:00" />
-        <CountdownEvent title="🌟 VketReal in Sapporo 開催まで" target="2025-07-21T10:00:00+09:00" />
+        <CountdownEvent title="🎉 VketReal 2025 Summer 開催まで" target="2025-07-26T10:00:00+09:00" />
+        <CountdownEvent title="🌟 VketReal 2025 Summer in Sapporo 開催まで" target="2025-07-21T10:00:00+09:00" />
       </main>
       <Footer />
     </>
