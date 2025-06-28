@@ -1,6 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
-// import Footer from "../components/Footer";
 
 export default function Document() {
   return (
@@ -207,7 +206,6 @@ export default function Document() {
       <body className="antialiased" style={{ fontFamily: 'RocknRoll One, sans-serif' }}>
         <Main />
         <NextScript />
-        {/* <Footer /> */}
       </body>
     </Html>
   );
