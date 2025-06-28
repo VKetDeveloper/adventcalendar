@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 export default function Document() {
   return (
@@ -56,7 +56,7 @@ export default function Document() {
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet" />
         {/* Google Analytics */}
         <Script
           id="google-analytics"
@@ -204,10 +204,10 @@ export default function Document() {
         strategy="afterInteractive"
       />
       </Head>
-      <body className="antialiased" style={{ fontFamily: 'WDXL Lubrifont JP N, sans-serif' }}>
+      <body className="antialiased" style={{ fontFamily: 'RocknRoll One, sans-serif' }}>
         <Main />
         <NextScript />
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </Html>
   );
